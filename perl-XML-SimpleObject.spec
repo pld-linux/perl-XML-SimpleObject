@@ -1,16 +1,23 @@
+#
+# Conditional build:
+%bcond_without  tests           # do not perform "make test"
+
 %include	/usr/lib/rpm/macros.perl
 Summary:	XML::SimpleObject perl module
 Summary(pl):	Modu³ perla XML::SimpleObject
 Name:		perl-XML-SimpleObject
-Version:	0.51
-Release:	2
-License:	GPL
+Version:	0.53
+Release:	1
+# Same as perl
+License:	GPL or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/XML/XML-SimpleObject%{version}.tar.gz
-# Source0-md5:	5e5e18b85927fa39a22e1d5730f1ac6a
+Source0:	http://www.cpan.org/modules/by-module/XML/XML-SimpleObject-%{version}.tar.gz
+# Source0-md5:	7826c2f27c36b90bfe731e0001da1021
 BuildRequires:	perl-devel
+%if %{with tests}
 BuildRequires:	perl-XML-LibXML >= 1.30
 BuildRequires:	perl-XML-Parser
+%endif
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -37,12 +44,13 @@ natomiast ma s³u¿yæ za obiektow± strukturê dla wychodz±cego drzewa.
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 %{__make}
-%{__make} test
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
