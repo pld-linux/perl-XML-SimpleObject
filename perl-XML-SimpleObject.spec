@@ -35,7 +35,7 @@ natomiast ma s³u¿yæ za obiektow± strukturê dla wychodz±cego drzewa.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make}
 %{__make} test
 
