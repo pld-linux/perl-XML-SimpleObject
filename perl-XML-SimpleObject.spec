@@ -2,13 +2,14 @@
 Summary:	XML::SimpleObject perl module
 Summary(pl):	Modu³ perla XML::SimpleObject
 Name:		perl-XML-SimpleObject
-Version:	0.41
-Release:	2
+Version:	0.51
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/XML/XML-SimpleObject%{version}.tar.gz
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl
+BuildRequires:	perl-XML-LibXML >= 1.30
 BuildRequires:	perl-XML-Parser
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -47,3 +48,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc *.gz
 %doc %{_mandir}/man3/*
 %{perl_sitelib}/XML/SimpleObject.pm
+%{perl_sitelib}/XML/SimpleObject
+%{perl_sitelib}/XML/ex.pl
