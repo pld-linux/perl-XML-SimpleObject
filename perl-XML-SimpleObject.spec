@@ -3,7 +3,7 @@ Summary:	XML-SimpleObject perl module
 Summary(pl):	Modu³ perla XML-SimpleObject
 Name:		perl-XML-SimpleObject
 Version:	0.41
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/XML/XML-SimpleObject%{version}.tar.gz
