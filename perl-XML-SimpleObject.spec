@@ -7,6 +7,7 @@ Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/XML/XML-SimpleObject%{version}.tar.gz
+# Source0-md5:	5e5e18b85927fa39a22e1d5730f1ac6a
 BuildRequires:	perl-devel
 BuildRequires:	perl-XML-LibXML >= 1.30
 BuildRequires:	perl-XML-Parser
