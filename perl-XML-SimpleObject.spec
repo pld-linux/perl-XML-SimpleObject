@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
-Summary:	XML-SimpleObject perl module
-Summary(pl):	Modu³ perla XML-SimpleObject
+Summary:	XML::SimpleObject perl module
+Summary(pl):	Modu³ perla XML::SimpleObject
 Name:		perl-XML-SimpleObject
 Version:	0.41
 Release:	2
