@@ -33,7 +33,7 @@ natomiast ma s³u¿yæ za obiektow± strukturê dla wychodz±cego drzewa.
 %setup -q -n XML-SimpleObject%{version}
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make}
 %{__make} test
 
