@@ -7,10 +7,10 @@ Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/XML/XML-SimpleObject%{version}.tar.gz
-BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl
 BuildRequires:	perl-XML-LibXML >= 1.30
 BuildRequires:	perl-XML-Parser
+BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -23,8 +23,11 @@ XML::Parser; rather, it is meant to serve purely as an object struct
 for an outgoing tree.
 
 %description -l pl
-XML::SimpleObject jest ma³ym i prostym pakietem pozwalaj±cym na ³atwy
-dostêp do struktury dokumentu XML.
+XML::SimpleObject jest ma³ym i prostym pakietem, który przyjmuje
+wyj¶cie z XML::Parser jako drzewo i pozwala na ³atwy dostêp do
+struktury dokumentu XML. Jest bardzo lekki, ale daje najprostszy
+mo¿liwy dostêp do dokumentów XML. Nie jest to podklasa XML::Parser -
+natomiast ma s³u¿yæ za obiektow± strukturê dla wychodz±cego drzewa.
 
 %prep
 %setup -q -n XML-SimpleObject%{version}
@@ -38,15 +41,14 @@ perl Makefile.PL
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
-gzip -9nf README Changes
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
-%doc %{_mandir}/man3/*
+%doc README Changes
 %{perl_sitelib}/XML/SimpleObject.pm
 %{perl_sitelib}/XML/SimpleObject
 %{perl_sitelib}/XML/ex.pl
+%{_mandir}/man3/*
