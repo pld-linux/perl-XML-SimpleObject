@@ -6,7 +6,7 @@ Version:	0.51
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
-Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/XML/XML-SimpleObject%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/XML/XML-SimpleObject%{version}.tar.gz
 BuildRequires:	perl
 BuildRequires:	perl-XML-LibXML >= 1.30
 BuildRequires:	perl-XML-Parser
