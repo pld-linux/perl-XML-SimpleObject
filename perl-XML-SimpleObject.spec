@@ -1,15 +1,15 @@
 #
 # Conditional build:
 %bcond_without  tests           # do not perform "make test"
-
+#
 %include	/usr/lib/rpm/macros.perl
 Summary:	XML::SimpleObject perl module
 Summary(pl):	Modu³ perla XML::SimpleObject
 Name:		perl-XML-SimpleObject
 Version:	0.53
 Release:	1
-# Same as perl
-License:	GPL or Artistic
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/XML/XML-SimpleObject-%{version}.tar.gz
 # Source0-md5:	7826c2f27c36b90bfe731e0001da1021
@@ -44,6 +44,7 @@ natomiast ma s³u¿yæ za obiektow± strukturê dla wychodz±cego drzewa.
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 %{__make}
+
 %{?with_tests:%{__make} test}
 
 %install
