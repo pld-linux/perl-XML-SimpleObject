@@ -4,7 +4,7 @@
 #
 %include	/usr/lib/rpm/macros.perl
 Summary:	XML::SimpleObject perl module
-Summary(pl):	Modu³ perla XML::SimpleObject
+Summary(pl.UTF-8):   ModuÅ‚ perla XML::SimpleObject
 Name:		perl-XML-SimpleObject
 Version:	0.53
 Release:	1
@@ -30,12 +30,12 @@ simplest access to an XML document possible. It does not subclass
 XML::Parser; rather, it is meant to serve purely as an object struct
 for an outgoing tree.
 
-%description -l pl
-XML::SimpleObject jest ma³ym i prostym pakietem, który przyjmuje
-wyj¶cie z XML::Parser jako drzewo i pozwala na ³atwy dostêp do
+%description -l pl.UTF-8
+XML::SimpleObject jest maÅ‚ym i prostym pakietem, ktÃ³ry przyjmuje
+wyjÅ›cie z XML::Parser jako drzewo i pozwala na Å‚atwy dostÄ™p do
 struktury dokumentu XML. Jest bardzo lekki, ale daje najprostszy
-mo¿liwy dostêp do dokumentów XML. Nie jest to podklasa XML::Parser -
-natomiast ma s³u¿yæ za obiektow± strukturê dla wychodz±cego drzewa.
+moÅ¼liwy dostÄ™p do dokumentÃ³w XML. Nie jest to podklasa XML::Parser -
+natomiast ma sÅ‚uÅ¼yÄ‡ za obiektowÄ… strukturÄ™ dla wychodzÄ…cego drzewa.
 
 %prep
 %setup -q -n XML-SimpleObject%{version}
