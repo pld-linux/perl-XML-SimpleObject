@@ -4,7 +4,7 @@
 #
 %include	/usr/lib/rpm/macros.perl
 Summary:	XML::SimpleObject perl module
-Summary(pl.UTF-8):   Moduł perla XML::SimpleObject
+Summary(pl.UTF-8):	Moduł perla XML::SimpleObject
 Name:		perl-XML-SimpleObject
 Version:	0.53
 Release:	1
