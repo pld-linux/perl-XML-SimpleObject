@@ -4,7 +4,6 @@
 
 %define		pdir	XML
 %define		pnam	SimpleObject
-%include	/usr/lib/rpm/macros.perl
 Summary:	XML::SimpleObject perl module
 Summary(pl.UTF-8):	Moduł perla XML::SimpleObject
 Name:		perl-XML-SimpleObject
