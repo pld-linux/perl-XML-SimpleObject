@@ -8,7 +8,7 @@ Summary:	XML::SimpleObject perl module
 Summary(pl.UTF-8):	Moduł perla XML::SimpleObject
 Name:		perl-XML-SimpleObject
 Version:	0.53
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
